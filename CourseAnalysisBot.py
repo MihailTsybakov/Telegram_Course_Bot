@@ -129,7 +129,7 @@ def start_handle(message):
         satisfyFlag = 1
     except ValueError:
         satisfyFlag = 0
-    if (message.text != '/start' and satisfyFlag == 0 and message.text != 'Я Амир'):
+    if (message.text != '/start' and satisfyFlag == 0):
         courseBot.send_message(message.chat.id, 'Sorry, I cant understand you. Try again.')
     if (satisfyFlag == 1):
         currTime = datetime.datetime.now()
